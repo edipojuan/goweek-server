@@ -6,8 +6,7 @@ const app = express();
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
 
-const password = '<password>';
-const uris = `mongodb://goweek:${password}@ds059722.mlab.com:59722/goweekdb`;
+const uris = 'mongodb://mongodb:27017/local';
 mongoose.connect(uris, { useNewUrlParser: true });
 
 app.use((req, res, next) => {
